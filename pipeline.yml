@@ -52,4 +52,9 @@ jobs:
       file: platform-automation-tasks/tasks/download-product.yml
       params: 
         CONFG_FILE: download-ops-manager.yml
-      input_mapping: interpolated-config
+      input_mapping: 
+        config: interpolated-config
+    - task: create-vm
+      image: platform-automation-image
+      file: platform-automation-tasks/tasks/create-vm.yml
+      
