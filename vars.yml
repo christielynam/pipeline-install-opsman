@@ -1,0 +1,4 @@
+---
+platform-automation-bucket: your-bucket-name
+credhub-server: https://your-credhub-expample.com
+opsman-url: https://pcf.foundation.example.com
