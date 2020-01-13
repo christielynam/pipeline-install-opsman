@@ -15,7 +15,8 @@ resources:
     api-token: ((pivnet-refresh-token))
 
 jobs:
-- name: test
+- name: install-ops-manager
+  serial: true
   plan:
     - get: platform-automation-image
       resource: platform-automation-image
@@ -27,6 +28,9 @@ jobs:
       params: 
         globs: ["*tasks*.zip"]
         unpack: true
-    - task: test
+    - get: config
+    - task: download-product
       image: platform-automation-image
-      file: platform-automation-tasks/tasks/test.yml
+      file: platform-automation-tasks/tasks/download-product.yml
+      params: 
+        CONFG_FILE: download-ops-manager.yml

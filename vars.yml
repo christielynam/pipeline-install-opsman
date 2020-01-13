@@ -2,3 +2,4 @@
 platform-automation-bucket: your-bucket-name
 credhub-server: https://your-credhub-expample.com
 opsman-url: https://pcf.foundation.example.com
+pipeline-repo: git@github.com:christielynam/your-repo-name
